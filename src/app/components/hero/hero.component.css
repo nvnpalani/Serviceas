@@ -116,7 +116,7 @@
 
 .float-card {
   position: absolute;
-  background: white;
+  background: var(--bg-card);
   border-radius: 16px;
   padding: 16px;
   display: flex;

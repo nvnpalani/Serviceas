@@ -33,6 +33,7 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+  color: #0f172a; /* Force dark text regardless of global dark mode */
 }
 
 .role-card:hover {
@@ -47,6 +48,7 @@
 .role-content h3 {
   font-size: 24px;
   margin-bottom: 24px;
+  color: #0f172a; /* Force dark text for pastel background */
 }
 
 .role-content ul {
@@ -59,7 +61,7 @@
   gap: 12px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: #334155; /* Force dark muted text for pastel background */
 }
 
 .check {
@@ -123,4 +125,5 @@
   height: 150px;
   object-fit: contain;
   transform: scale(1.2);
+  mix-blend-mode: multiply;
 }
