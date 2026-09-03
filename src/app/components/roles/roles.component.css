@@ -1,0 +1,126 @@
+.roles {
+  background-color: var(--bg-main);
+  padding: 100px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.role-card {
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-8px);
+}
+
+.role-card.resident { background-color: #f0fdf4; }
+.role-card.gatekeeper { background-color: #f0f9ff; }
+.role-card.association { background-color: #faf5ff; }
+.role-card.builder { background-color: #fffbeb; }
+
+.role-content h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.role-content ul {
+  margin-bottom: 32px;
+}
+
+.role-content li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+}
+
+.role-card.resident .check { background-color: #22c55e; }
+.role-card.gatekeeper .check { background-color: #3b82f6; }
+.role-card.association .check { background-color: #a855f7; }
+.role-card.builder .check { background-color: #f59e0b; }
+
+.btn-role {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.role-card.resident .btn-role { background-color: #dcfce7; color: #166534; }
+.role-card.resident .btn-role:hover { background-color: #bbf7d0; }
+
+.role-card.gatekeeper .btn-role { background-color: #e0f2fe; color: #075985; }
+.role-card.gatekeeper .btn-role:hover { background-color: #bae6fd; }
+
+.role-card.association .btn-role { background-color: #f3e8ff; color: #6b21a8; }
+.role-card.association .btn-role:hover { background-color: #e9d5ff; }
+
+.role-card.builder .btn-role { background-color: #fef3c7; color: #b45309; }
+.role-card.builder .btn-role:hover { background-color: #fde68a; }
+
+.role-img-placeholder {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+  margin-right: -24px;
+  margin-bottom: -32px;
+}
+
+@media (max-width: 1200px) {
+  .roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role-img-placeholder img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transform: scale(1.2);
+}
