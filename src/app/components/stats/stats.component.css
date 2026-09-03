@@ -75,10 +75,22 @@
 @media (max-width: 1024px) {
   .stats-banner {
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 32px;
     justify-content: center;
   }
   .stat-divider {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px;
+  }
+  .stat-item {
+    width: 240px; /* Forces all items to same width so icons align perfectly on the left */
+    justify-content: flex-start;
   }
 }

@@ -11,6 +11,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isDarkMode = false;
+  activeLink = 'home';
   private isBrowser = false;
 
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
@@ -32,7 +33,8 @@ export class HeaderComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  closeMenu() {
+  setActive(link: string) {
+    this.activeLink = link;
     this.isMenuOpen = false;
   }
 
