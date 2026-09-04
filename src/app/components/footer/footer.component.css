@@ -197,3 +197,22 @@
     text-align: center;
   }
 }
+
+/* Watermark */
+.footer-watermark {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(60px, 12vw, 160px);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--primary);
+  opacity: 0.08;
+  user-select: none;
+  pointer-events: none;
+  margin-top: -40px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  line-height: 1;
+}
