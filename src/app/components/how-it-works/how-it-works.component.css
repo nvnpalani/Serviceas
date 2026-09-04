@@ -81,12 +81,18 @@
 }
 
 .check-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  position: relative;
+  padding-left: 28px; /* space for the SVG checkmark */
   font-size: 15px;
   font-weight: 500;
   color: var(--text-main);
+  line-height: 1.5;
+}
+
+.check-list li svg {
+  position: absolute;
+  left: 0;
+  top: 4px; /* visually align with the first line of text */
 }
 
 /* --- MOCK UI CARDS --- */
