@@ -1,0 +1,97 @@
+<section id="pricing" class="pricing-section section-padding">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-pill">Honest Pricing</div>
+      <h2 class="section-title">Premium Software. One Honest Price.</h2>
+      <p class="section-subtitle">
+        Every feature, every role, free onboarding support — ₹9 per flat per month,<br>
+        first 60 days free. No ads, no tiers, no add-ons.
+      </p>
+    </div>
+
+    <div class="pricing-grid" appScrollReveal>
+      
+      <!-- Left Card: Founding Offer -->
+      <div class="pricing-card offer-card">
+        <div class="badge-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          Founding 100
+        </div>
+        
+        <h3>First 60 days free</h3>
+        <p class="desc">Set up your society, add your members and go live — pay ₹0 while you settle in. No card needed.</p>
+        
+        <div class="price-line">
+          <span class="then-text">Then</span>
+          <span class="price-big">₹9</span>
+          <span class="price-unit">per flat / month</span>
+          <span class="badge-success">Locked for life</span>
+        </div>
+        
+        <div class="disclaimer-box">
+          Reserved for the first 100 societies. Founding communities get 60 days free and keep ₹9/flat/month for as long as they stay with FourDotz. After 100 societies, free trial becomes 30 days.
+        </div>
+      </div>
+
+      <!-- Right Card: Calculator -->
+      <div class="pricing-card calc-card">
+        <h3>Estimate for your society</h3>
+        
+        <div class="calc-header">
+          <div class="calc-label">
+            <span>Flats in your society</span>
+            <div class="flats-display">{{ flats }}</div>
+          </div>
+          <div class="calc-total">
+            <div class="total-price">₹{{ totalPrice | number }}</div>
+            <span>/ month</span>
+          </div>
+        </div>
+
+        <div class="range-container">
+          <input 
+            type="range" 
+            min="20" 
+            max="1000" 
+            step="10" 
+            [(ngModel)]="flats" 
+            class="slider"
+            [style.background]="'linear-gradient(to right, var(--primary) ' + ((flats - 20) / (1000 - 20) * 100) + '%, var(--border-color) ' + ((flats - 20) / (1000 - 20) * 100) + '%)'">
+          <div class="range-labels">
+            <span>20</span>
+            <span>1000</span>
+          </div>
+        </div>
+
+        <div class="price-breakdown">
+          <div class="breakdown-box free-box">
+            <span class="box-label">First 60 days</span>
+            <span class="box-value">₹0</span>
+          </div>
+          <div class="breakdown-box base-box">
+            <span class="box-label">Founding price</span>
+            <span class="box-value">₹9 <small>per flat / month</small></span>
+          </div>
+        </div>
+
+        <ul class="features-list">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Everything included · free setup support · Tamil + English
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Pay yearly · 12 months for the price of 10
+          </li>
+        </ul>
+
+        <div class="calc-footer">
+          Founding pricing is confirmed during onboarding. Cancel anytime.
+        </div>
+
+        <button class="btn btn-primary btn-block">Book a Demo</button>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 80px 0 120px;
+  padding: 64px 0 96px;
   overflow: hidden;
 }
 
@@ -173,7 +173,37 @@
   .hero-actions, .trust-badges, .social-proof {
     justify-content: center;
   }
+  .building-wrapper {
+    margin-top: 40px;
+  }
   .float-card {
-    display: none;
+    scale: 0.85;
+  }
+  .float-card:nth-child(2) {
+    left: 0 !important;
+  }
+  .float-card:nth-child(3) {
+    right: 0 !important;
+  }
+  .float-card:nth-child(4) {
+    bottom: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .building-wrapper {
+    height: 320px;
+  }
+  .float-card {
+    scale: 0.65;
+  }
+  .float-card:nth-child(2) {
+    left: -12% !important;
+  }
+  .float-card:nth-child(3) {
+    right: -12% !important;
+  }
+  .float-card:nth-child(4) {
+    bottom: -8% !important;
   }
 }

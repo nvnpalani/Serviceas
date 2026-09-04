@@ -1,6 +1,7 @@
 .section-padding {
   padding: 100px 0;
   background-color: var(--bg-main);
+  overflow: hidden; /* Important for marquee to not cause page scroll */
 }
 
 .section-header {
@@ -18,13 +19,33 @@
   color: var(--text-muted);
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Add subtle fading edges for a premium look */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.marquee-track {
+  display: flex;
   gap: 24px;
+  width: max-content;
+  /* Adjust animation duration (40s) for "normal speed". 
+     Since there are 8 cards, it will take 40s to loop once. */
+  animation: scroll-marquee 40s linear infinite;
+}
+
+/* Pause animation on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
 }
 
 .feature-card {
+  /* Fixed width is crucial for a smooth marquee */
+  width: 320px;
+  flex-shrink: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 16px;
@@ -67,4 +88,19 @@
 .feature-card p {
   font-size: 14px;
   color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Keyframes for the infinite scroll */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Translate exactly half the total width of the track (which is exactly one set of the 8 cards + their gaps). 
+       Since we have gap: 24px, the exact calculation is handled by translating -50% of the max-content width if the container has 2 identical sets AND gap is perfectly symmetrical.
+       Actually, `translateX(calc(-50% - 12px))` is usually needed if gap is applied between the two sets. 
+       Let's use -50% - (half gap) to be precise so it loops seamlessly. */
+    transform: translateX(calc(-50% - 12px));
+  }
 }

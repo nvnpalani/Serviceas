@@ -33,22 +33,35 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
-  color: #0f172a; /* Force dark text regardless of global dark mode */
+  color: #0f172a;
+  /* Force dark text regardless of global dark mode */
 }
 
 .role-card:hover {
   transform: translateY(-8px);
 }
 
-.role-card.resident { background-color: #f0fdf4; }
-.role-card.gatekeeper { background-color: #f0f9ff; }
-.role-card.association { background-color: #faf5ff; }
-.role-card.builder { background-color: #fffbeb; }
+.role-card.resident {
+  background-color: #f0fdf4;
+}
+
+.role-card.gatekeeper {
+  background-color: #f0f9ff;
+}
+
+.role-card.association {
+  background-color: #faf5ff;
+}
+
+.role-card.builder {
+  background-color: #fffbeb;
+}
 
 .role-content h3 {
   font-size: 24px;
   margin-bottom: 24px;
-  color: #0f172a; /* Force dark text for pastel background */
+  color: #0f172a;
+  /* Force dark text for pastel background */
 }
 
 .role-content ul {
@@ -61,7 +74,8 @@
   gap: 12px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #334155; /* Force dark muted text for pastel background */
+  color: #334155;
+  /* Force dark muted text for pastel background */
 }
 
 .check {
@@ -75,10 +89,21 @@
   color: white;
 }
 
-.role-card.resident .check { background-color: #22c55e; }
-.role-card.gatekeeper .check { background-color: #3b82f6; }
-.role-card.association .check { background-color: #a855f7; }
-.role-card.builder .check { background-color: #f59e0b; }
+.role-card.resident .check {
+  background-color: #22c55e;
+}
+
+.role-card.gatekeeper .check {
+  background-color: #3b82f6;
+}
+
+.role-card.association .check {
+  background-color: #a855f7;
+}
+
+.role-card.builder .check {
+  background-color: #f59e0b;
+}
 
 .btn-role {
   padding: 10px 20px;
@@ -88,17 +113,41 @@
   transition: all 0.2s ease;
 }
 
-.role-card.resident .btn-role { background-color: #dcfce7; color: #166534; }
-.role-card.resident .btn-role:hover { background-color: #bbf7d0; }
+.role-card.resident .btn-role {
+  background-color: #dcfce7;
+  color: #166534;
+}
 
-.role-card.gatekeeper .btn-role { background-color: #e0f2fe; color: #075985; }
-.role-card.gatekeeper .btn-role:hover { background-color: #bae6fd; }
+.role-card.resident .btn-role:hover {
+  background-color: #bbf7d0;
+}
 
-.role-card.association .btn-role { background-color: #f3e8ff; color: #6b21a8; }
-.role-card.association .btn-role:hover { background-color: #e9d5ff; }
+.role-card.gatekeeper .btn-role {
+  background-color: #e0f2fe;
+  color: #075985;
+}
 
-.role-card.builder .btn-role { background-color: #fef3c7; color: #b45309; }
-.role-card.builder .btn-role:hover { background-color: #fde68a; }
+.role-card.gatekeeper .btn-role:hover {
+  background-color: #bae6fd;
+}
+
+.role-card.association .btn-role {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+.role-card.association .btn-role:hover {
+  background-color: #e9d5ff;
+}
+
+.role-card.builder .btn-role {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.role-card.builder .btn-role:hover {
+  background-color: #fde68a;
+}
 
 .role-img-placeholder {
   display: flex;

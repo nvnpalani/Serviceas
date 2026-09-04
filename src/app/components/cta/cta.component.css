@@ -4,7 +4,7 @@
 }
 
 .cta-banner {
-  background-color: var(--primary);
+  background-color: var(--bg-card);
   border-radius: 24px;
   display: flex;
   align-items: center;
@@ -30,19 +30,19 @@
 .cta-content {
   flex: 1;
   text-align: center;
-  color: white;
+  color: var(--text-main);
   z-index: 2;
   padding: 40px;
 }
 
 .cta-content h2 {
-  color: white;
+  color: var(--text-main);
   font-size: 36px;
   margin-bottom: 16px;
 }
 
 .cta-content p {
-  color: #ecfdf5;
+  color: var(--text-muted);
   font-size: 18px;
   margin-bottom: 32px;
 }
@@ -53,23 +53,7 @@
   gap: 16px;
 }
 
-.cta-btn-white {
-  background-color: var(--bg-card);
-  color: var(--primary);
-}
-
-.cta-btn-white:hover {
-  background-color: #f8fafc;
-}
-
-.cta-btn-outline-white {
-  border-color: rgba(255, 255, 255, 0.5);
-  color: white;
-}
-
-.cta-btn-outline-white:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+/* Removed white button overrides as we now want the default btn-primary on light background */
 
 .cta-img-left, .cta-img-right {
   width: 250px;
@@ -130,6 +114,10 @@
 .cta-img-right span {
   display: block;
   transform: translateY(20px);
+}
+
+.cta-img-right img {
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 992px) {
