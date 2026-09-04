@@ -78,9 +78,9 @@
 .app-download-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 20px;
-  gap: 16px;
+  gap: 24px;
 }
 
 .app-download-row:last-child {
@@ -91,6 +91,7 @@
   font-size: 13px;
   font-weight: 600;
   color: var(--text-main);
+  min-width: 120px;
 }
 
 .play-btn {
