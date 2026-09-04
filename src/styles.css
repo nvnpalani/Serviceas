@@ -3,11 +3,11 @@
 
 :root {
   /* Colors */
-  --primary: #e11d48;
-  --primary-hover: #be123c;
-  --primary-light: #ffe4e6;
-  --primary-lighter: #fff1f2;
-  --secondary: #9333ea;
+  --primary: #8b4095;
+  --primary-hover: #73347b;
+  --primary-light: #e8d9eb;
+  --primary-lighter: #f4edf5;
+  --secondary: #ea4531;
 
   --text-main: #0f172a;
   --text-muted: #475569;
@@ -31,11 +31,11 @@
 }
 
 :root[data-theme="dark"] {
-  --primary: #fb7185;
-  --primary-hover: #f43f5e;
-  --primary-light: #881337;
-  --primary-lighter: #4c0519;
-  --secondary: #c084fc;
+  --primary: #a55aae;
+  --primary-hover: #8b4095;
+  --primary-light: #4b2251;
+  --primary-lighter: #28122c;
+  --secondary: #f07161;
 
   --text-main: #f8fafc;
   --text-muted: #cbd5e1;
@@ -116,13 +116,13 @@ button {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #f43f5e 0%, #8b5cf6 100%);
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, #e11d48 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #d33c2a 0%, #73347b 100%);
   transform: translateY(-1px);
 }
 

@@ -147,7 +147,7 @@
 }
 
 .text-success {
-  color: #16a34a;
+  color: var(--primary);
 }
 
 .bg-shape {
@@ -207,3 +207,5 @@
     bottom: -8% !important;
   }
 }
+
+

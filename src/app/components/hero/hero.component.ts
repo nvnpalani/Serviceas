@@ -52,10 +52,10 @@ export class HeroComponent implements OnInit, OnDestroy {
 
   getMaintenanceColor() {
     switch (this.maintenanceStatus) {
-      case 'Completed': return '#db2777'; // Pink
+      case 'Completed': return 'var(--primary)'; // Pink
       case 'Processing': return '#0284c7'; // Blue
       case 'Pending': return '#ca8a04'; // Yellow/Orange
-      default: return '#db2777';
+      default: return 'var(--primary)';
     }
   }
 
@@ -63,3 +63,4 @@ export class HeroComponent implements OnInit, OnDestroy {
     this.intervals.forEach(i => clearInterval(i));
   }
 }
+

@@ -101,8 +101,8 @@
 
 .badge-success {
   padding: 4px 12px;
-  background-color: #dcfce7;
-  color: #16a34a;
+  background-color: var(--primary-lighter);
+  color: var(--primary);
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
@@ -216,7 +216,7 @@
 }
 
 .free-box {
-  background-color: #ecfdf5; /* Light green */
+  background-color: var(--primary-lighter); /* Light green */
 }
 
 .base-box {
@@ -279,3 +279,5 @@
     grid-template-columns: 1fr;
   }
 }
+
+
