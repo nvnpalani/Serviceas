@@ -42,18 +42,21 @@
           <div class="mock-header">BUILDER COMMAND CENTRE</div>
           <div class="mock-body">
             <div class="project-tabs">
-              <div class="ptab active">Greenfield</div>
-              <div class="ptab">Skyline</div>
-              <div class="ptab">Orchard</div>
+              <div *ngFor="let p of projects" 
+                   class="ptab" 
+                   [class.active]="activeProject.id === p.id"
+                   (click)="selectProject(p)">
+                {{ p.id }}
+              </div>
             </div>
             <div class="project-details">
-              <strong>Greenfield Residency</strong>
-              <span>Coimbatore &middot; 248 homes</span>
+              <strong>{{ activeProject.name }}</strong>
+              <span>{{ activeProject.location }} &middot; {{ activeProject.homes }} homes</span>
               <div class="progress-wrapper">
                 <div class="progress-bar">
-                  <div class="fill" style="width: 94%"></div>
+                  <div class="fill" [style.width.%]="activeProject.occupancy" style="transition: width 0.5s ease;"></div>
                 </div>
-                <span>94% Occupied</span>
+                <span>{{ activeProject.occupancy }}% Occupied</span>
               </div>
             </div>
           </div>

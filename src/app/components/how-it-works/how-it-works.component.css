@@ -166,8 +166,8 @@
 }
 
 .status-badge.green {
-  background: #dcfce7;
-  color: #16a34a;
+  background: #fce7f3;
+  color: #db2777;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;
@@ -306,6 +306,8 @@
   background: var(--bg-main);
   color: var(--text-muted);
   border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .ptab.active {
@@ -351,12 +353,12 @@
 
 .progress-bar .fill {
   height: 100%;
-  background: #10b981;
+  background: #db2777;
 }
 
 .progress-wrapper span {
   font-size: 11px;
-  color: #10b981;
+  color: #db2777;
   font-weight: 600;
 }
 
@@ -463,3 +465,4 @@
     font-size: 28px;
   }
 }
+
