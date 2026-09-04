@@ -245,8 +245,8 @@
 }
 
 .badge-dark {
-  border: 1px solid #e11d48;
-  color: #fb7185;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   font-size: 10px;
   font-weight: 600;
   padding: 4px 8px;
