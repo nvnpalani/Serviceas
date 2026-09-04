@@ -183,8 +183,8 @@
 }
 
 .icon-phone { background-color: #fff1f2; color: #e11d48; }
-.icon-email { background-color: #f0fdf4; color: #16a34a; }
-.icon-whatsapp { background-color: #ecfdf5; color: #059669; }
+.icon-email { background-color: #fce7f3; color: #db2777; }
+.icon-whatsapp { background-color: #fce7f3; color: #db2777; }
 
 .contact-details {
   display: flex;
@@ -216,8 +216,8 @@
 }
 
 .badge-online {
-  background-color: #dcfce7;
-  color: #16a34a;
+  background-color: #fce7f3;
+  color: #db2777;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 6px;
@@ -305,3 +305,4 @@
   font-size: 12px;
   margin-top: 6px;
 }
+
