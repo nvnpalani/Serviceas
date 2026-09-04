@@ -4,9 +4,9 @@
 
 .footer {
   position: relative;
-  background: #f3eaf6; /* soft lavender matching brand primary light */
+  background: #f3eaf6;
   overflow: hidden;
-  padding: 48px 0 0;
+  padding: 56px 0 0;
 }
 
 /* Watermark */
@@ -34,7 +34,7 @@
   z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px 40px;
+  padding: 0 48px 48px;
 }
 
 /* Top Row */
@@ -42,11 +42,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-bottom: 32px;
+  padding-bottom: 40px;
   border-bottom: 1px solid rgba(139, 64, 149, 0.15);
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
 }
 
 .footer-links {
@@ -95,8 +95,8 @@
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 16px;
-  padding-bottom: 80px; /* space for watermark */
+  gap: 24px;
+  padding-bottom: 100px;
 }
 
 .footer-contact-info {
